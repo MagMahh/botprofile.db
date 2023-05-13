@@ -38,4 +38,4 @@ Note: If you can't add a bot in a specific rank, then it's because the difficult
 Location: SteamLibrary -> Counter-Strike: Global Offensive -> Properties -> csgo -> botprofile.db
 
 
-**HAVE FUN! :DDDDD**
+**HAVE FUN! :DDD**
