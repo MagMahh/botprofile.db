@@ -35,7 +35,7 @@ S1 (Silver I) [EASY]
 Casual (Casual, Random, Non-ranked, etc..) [EASY]
 
 Note: If you can't add a bot in a specific rank, then it's because the difficulty is not the same as the rank.
-Location: SteamLibrary -> Counter-Strike: Global Offensive -> Properties -> csgo -> botprofile.db
+Location: SteamLibrary -> Counter-Strike: Global Offensive -> Properties -> Installed Files -> Browse -> csgo -> botprofile.db
 
 
 **HAVE FUN! :DDD**
