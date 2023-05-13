@@ -1,0 +1,2466 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+// Edited and improved by: MagMah (https://www.youtube.com/@MagMah/)
+// Thanks to MartimMoriano for recording and testing the botprofile!
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 40
+	Aggression = 50
+	ReactionTime = 0.4
+	AttackDelay = 0.1
+	Teamwork = 40
+	AimFocusInitial = 4			// initial focus spread in degrees (from desired center)
+	AimFocusDecay = 0.4				// how much focus shrinks per second (.25 = 25% of size after 1 sec)
+	AimFocusOffsetScale = 0.04		// controls accuracy when tracking to target (0 == perfect, should always be < 1)
+	AimfocusInterval = 0.4			// how often focus is adjusted (smaller intervals means better movement tracking)
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 0
+	LookAngleMaxAccelNormal = 2000.0
+	LookAngleStiffnessNormal = 300.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 5000.0
+	LookAngleStiffnessAttacking = 500.0
+	LookAngleDampingAttacking = 30.0
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template MagMah
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+	WeaponPreference = mp7
+	AttackDelay = 0.01
+End
+
+Template Andremegaa
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+End
+
+Template Ghostenox
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+End
+
+Template MartimMoriano
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = p90
+	WeaponPreference = nova
+End
+
+Template tdcm09
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = awp
+	WeaponPreference = ssg08
+	WeaponPreference = negev
+End
+
+Template RifleT
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+End
+
+Template Horus
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+Template OzarK
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+End
+
+Template Henri
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = ump45
+End
+
+Template The
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+End
+
+
+// skill templates
+
+// The creator of this botprofile + his friends (and BOT Dave for some reason). Can you win against them?
+Template Star
+	Skill = 100
+	Rank = 2500
+	Aggression = 99
+	Teamwork = 100
+	ReactionTime = 0.01
+	AttackDelay = 0.1
+	Difficulty = EXPERT
+	AimFocusInitial = 0.25
+	AimFocusDecay = 0.05
+	AimFocusOffsetScale = 0.01
+	AimfocusInterval = 0.05
+End
+
+// Global Elite
+Template GE
+	Skill = 95
+	Rank = 2200
+	Aggression = 100
+	Teamwork = 95
+	ReactionTime = 0.05
+	AttackDelay = 0.12
+	Difficulty = EXPERT
+	AimFocusInitial = 0.5
+	AimFocusDecay = 0.1
+	AimFocusOffsetScale = 0.04
+	AimfocusInterval = 0.1
+End
+
+// Supreme Master First Class
+Template SMFC
+	Skill = 90
+	Rank = 2000
+	Aggression = 95
+	Teamwork = 85
+	ReactionTime = 0.08
+	AttackDelay = 0.14
+	Difficulty = EXPERT
+	AimFocusInitial = 0.6
+	AimFocusDecay = 0.12
+	AimFocusOffsetScale = 0.08
+	AimfocusInterval = 0.12
+End
+
+// Legendary Eagle Master
+Template LEM
+	Skill = 85
+	Rank = 1900
+	Aggression = 90
+	Teamwork = 80
+	ReactionTime = 0.1
+	AttackDelay = 0.16
+	Difficulty = EXPERT
+	AimFocusInitial = 0.7
+	AimFocusDecay = 0.15
+	AimFocusOffsetScale = 0.012
+	AimfocusInterval = 0.15
+End
+
+// Legendary Eagle
+Template LE
+	Skill = 80
+	Rank = 1850
+	Aggression = 85
+	Teamwork = 75
+	ReactionTime = 0.12
+	AttackDelay = 0.18
+	Difficulty = EXPERT
+	AimFocusInitial = 1
+	AimFocusDecay = 0.2
+	AimFocusOffsetScale = 0.015
+	AimfocusInterval = 0.2
+End
+
+// Distinguished Master Guardian
+Template DMG
+	Skill = 75
+	Rank = 1750
+	Aggression = 80
+	Teamwork = 65
+	ReactionTime = 0.14
+	AttackDelay = 0.2
+	Difficulty = EXPERT+HARD
+	AimFocusInitial = 1.1
+	AimFocusDecay = 0.22
+	AimFocusOffsetScale = 0.02
+	AimfocusInterval = 0.22
+End
+
+// Master Guardian Elite
+Template MGE
+	Skill = 70
+	Rank = 1700
+	Aggression = 75
+	Teamwork = 60
+	ReactionTime = 0.16
+	AttackDelay = 0.2
+	Difficulty = HARD
+	AimFocusInitial = 1.2
+	AimFocusDecay = 0.25
+	AimFocusOffsetScale = 0.025
+	AimfocusInterval = 0.25
+End
+
+// Master Guardian II
+Template MG2
+	Skill = 65
+	Rank = 1650
+	Aggression = 70
+	Teamwork = 55
+	ReactionTime = 0.18
+	AttackDelay = 0.2
+	Difficulty = HARD
+	AimFocusInitial = 1.5
+	AimFocusDecay = 0.3
+	AimFocusOffsetScale = 0.03
+	AimfocusInterval = 0.3
+End
+
+// Master Guardian I
+Template MG1
+	Skill = 60
+	Rank = 1600
+	Aggression = 65
+	Teamwork = 50
+	ReactionTime = 0.2
+	AttackDelay = 0.2
+	Difficulty = HARD
+	AimFocusInitial = 1.7
+	AimFocusDecay = 0.35
+	AimFocusOffsetScale = 0.035
+	AimfocusInterval = 0.35
+End
+
+// Gold Nova Master
+Template GNM
+	Skill = 55
+	Rank = 1500
+	Aggression = 60
+	Teamwork = 45
+	ReactionTime = 0.22
+	AttackDelay = 0.2
+	Difficulty = HARD
+	AimFocusInitial = 2
+	AimFocusDecay = 0.4
+	AimFocusOffsetScale = 0.04
+	AimfocusInterval = 0.4
+End
+
+// Gold Nova III
+Template GN3
+	Skill = 50
+	Rank = 1400
+	Aggression = 55
+	Teamwork = 35
+	ReactionTime = 0.24
+	AttackDelay = 0.2
+	Difficulty = HARD+NORMAL
+	AimFocusInitial = 2.1
+	AimFocusDecay = 0.42
+	AimFocusOffsetScale = 0.045
+	AimfocusInterval = 0.42
+End
+
+// Gold Nova II
+Template GN2
+	Skill = 45
+	Rank = 1350
+	Aggression = 50
+	Teamwork = 30
+	ReactionTime = 0.26
+	AttackDelay = 0.2
+	Difficulty = NORMAL
+	AimFocusInitial = 2.2
+	AimFocusDecay = 0.44
+	AimFocusOffsetScale = 0.05
+	AimfocusInterval = 0.44
+End
+
+// Gold Nova I
+Template GN1
+	Skill = 40
+	Rank = 1300
+	Aggression = 45
+	Teamwork = 25
+	ReactionTime = 0.28
+	AttackDelay = 0.2
+	Difficulty = NORMAL
+	AimFocusInitial = 2.3
+	AimFocusDecay = 0.46
+	AimFocusOffsetScale = 0.055
+	AimfocusInterval = 0.46
+End
+
+// Silver Elite Master
+Template SEM
+	Skill = 35
+	Rank = 1250
+	Aggression = 40
+	Teamwork = 22
+	ReactionTime = 0.3
+	AttackDelay = 0.2
+	Difficulty = NORMAL
+	AimFocusInitial = 2.4
+	AimFocusDecay = 0.48
+	AimFocusOffsetScale = 0.06
+	AimfocusInterval = 0.48
+End
+
+// Silver Elite
+Template SE
+	Skill = 30
+	Rank = 1200
+	Aggression = 35
+	Teamwork = 19
+	ReactionTime = 0.32
+	AttackDelay = 0.2
+	Difficulty = NORMAL
+	AimFocusInitial = 2.5
+	AimFocusDecay = 0.5
+	AimFocusOffsetScale = 0.065
+	AimfocusInterval = 0.5
+End
+
+// Silver IV
+Template S4
+	Skill = 25
+	Rank = 1100
+	Aggression = 30
+	Teamwork = 16
+	ReactionTime = 0.34
+	AttackDelay = 0.21
+	Difficulty = NORMAL+EASY
+	AimFocusInitial = 3
+	AimFocusDecay = 0.6
+	AimFocusOffsetScale = 0.075
+	AimfocusInterval = 0.6
+End
+
+// Silver III
+Template S3
+	Skill = 20
+	Rank = 1000
+	Aggression = 25
+	Teamwork = 13
+	ReactionTime = 0.36
+	AttackDelay = 0.22
+	Difficulty = EASY
+	AimFocusInitial = 3.5
+	AimFocusDecay = 0.7
+	AimFocusOffsetScale = 0.085
+	AimfocusInterval = 0.7
+End
+
+// Silver II
+Template S2
+	Skill = 15
+	Rank = 900
+	Aggression = 20
+	Teamwork = 10
+	ReactionTime = 0.38
+	AttackDelay = 0.23
+	Difficulty = EASY
+	AimFocusInitial = 4
+	AimFocusDecay = 0.8
+	AimFocusOffsetScale = 0.095
+	AimfocusInterval = 0.8
+End
+
+// Silver I
+Template S1
+	Skill = 10
+	Rank = 800
+	Aggression = 15
+	Teamwork = 8
+	ReactionTime = 0.4
+	AttackDelay = 0.24
+	Difficulty = EASY
+	AimFocusInitial = 4.5
+	AimFocusDecay = 0.9
+	AimFocusOffsetScale = 0.1
+	AimfocusInterval = 0.9
+End
+
+// Casual, Noob and Non-ranked
+Template Casual
+	Skill = 5
+	Rank = 500
+	Aggression = 25
+	Teamwork = 1
+	ReactionTime = 0.5
+	AttackDelay = 0.25
+	Difficulty = EASY
+	AimFocusInitial = 5
+	AimFocusDecay = 1
+	AimFocusOffsetScale = 0.1
+	AimfocusInterval = 1
+End
+
+// That Random Guy
+Template Random
+	Rank = 0
+	Difficulty = EXPERT+HARD+NORMAL+EASY
+End
+
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+Star+MagMah "Magma [☆]"
+	Skin = 1
+	VoicePitch = 95
+	Aggression = 100
+End
+
+Star+Andremegaa "Giga [☆]"
+	Skin = 1
+	VoicePitch = 101
+	Aggression = 95
+End
+
+Star+Ghostenox "Ghost [☆]"
+	Skin = 1
+	VoicePitch = 110
+	Aggression = 97
+End
+
+Star+MartimMoriano "Matim [☆]"
+	Skin = 1
+	VoicePitch = 90
+	Aggression = 95
+End
+
+Star+tdcm09 "T.D.C.M. [☆]"
+	Skin = 1
+	VoicePitch = 95
+	Aggression = 98
+End
+
+Star+RifleT "Dave [☆]"
+	Skin = 4
+	VoicePitch = 98
+End
+
+Star+Horus "Hórus [☆]"
+	Skin = 4
+	VoicePitch = 98
+End
+
+Star+OzarK "Scyla [☆]"
+	Skin = 4
+	VoicePitch = 98
+	Aggression = 100
+End
+
+Star+Henri "Spyky [☆]"
+	Skin = 4
+	VoicePitch = 98
+	Aggression = 96
+End
+
+Star+The "Worst [☆]"
+	Skin = 4
+	VoicePitch = 98
+	Aggression = 98
+End
+
+
+//----------------------------------------
+
+GE "Minh [GE]"
+	Skin = 2
+	VoicePitch = 105
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+End
+
+// He (almost) crushed everyone!
+GE "Crusher [GE]"
+	Skin = 4
+	VoicePitch = 84
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = xm1014
+	Aggression = 99
+End
+
+GE "Pheonix [GE]"
+	Skin = 4
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ump45
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	Aggression = 98
+End
+
+GE "Rock [GE]"
+	Skin = 2
+	VoicePitch = 80
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	Aggression = 90
+End
+
+GE "Shark [GE]"
+	Skin = 4
+	VoicePitch = 90
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	Aggression = 96
+End
+
+GE "Wolf [GE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 92
+End
+
+GE "Alpha [GE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	Aggression = 97
+End
+
+GE "Universal [GE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = awp
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 95
+End
+
+GE "Whale [GE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 93
+End
+
+GE "Thanos [GE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ump45
+	WeaponPreference = nova
+	Aggression = 94
+End
+
+
+//----------------------------------------
+
+SMFC "Gunner [SMFC]"
+	Skin = 1
+	VoicePitch = 96
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+// THE ONE THAT WON THE BOT ROYALE. GG!
+SMFC "Vitaliy [SMFC]"
+	Skin = 3
+	VoicePitch = 105
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = nova
+	Aggression = 88
+End
+
+SMFC "Steel [SMFC]"
+	Skin = 1
+	VoicePitch = 84
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = ump45
+	Aggression = 90
+End
+
+SMFC "Stone [SMFC]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = awp
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	Aggression = 85
+End
+
+SMFC "Arnold [SMFC]"
+	VoicePitch = 85
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 93
+End
+
+SMFC "Brett [SMFC]"
+	VoicePitch = 100
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	Aggression = 91
+End
+
+SMFC "Bravo [SMFC]"
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	Aggression = 94
+End
+
+SMFC "Chief [SMFC]"
+	VoicePitch = 100
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 89
+End
+
+SMFC "Seal [SMFC]"
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 87
+End
+
+SMFC "Aracho [SMFC]"
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 92
+End
+
+
+//----------------------------------------
+
+LEM "Kurt [LEM]"
+	VoicePitch = 95
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = negev
+End
+
+LEM "Kyle [LEM]"
+	Cost = 5
+	VoicePitch = 115
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = ump45
+	Aggression = 80
+End
+
+LEM "Moe [LEM]"
+	VoicePitch = 87
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	Aggression = 85
+End
+
+LEM "Quade [LEM]"
+	VoicePitch = 91
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	Aggression = 88
+End
+
+LEM "Quintin [LEM]"
+	VoicePitch = 101
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = ump45
+	Aggression = 87
+End
+
+LEM "Ringo [LEM]"
+	VoicePitch = 112
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mp7
+	Aggression = 83
+End
+
+LEM "Charlie [LEM]"
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	Aggression = 89
+End
+
+LEM "Principal [LEM]"
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 86
+End
+
+LEM "Squid [LEM]"
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 84
+End
+
+LEM "Crown [LEM]"
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 82
+End
+
+
+//----------------------------------------
+
+LE "Rip [LE]"
+	VoicePitch = 99
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = mp7
+End
+
+LE "Zach [LE]"
+	VoicePitch = 100
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = aug
+	Aggression = 80
+End
+
+LE "Cory [LE]"
+	Skin = 1
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+	Aggression = 83
+End
+
+LE "Quinn [LE]"
+	Skin = 3
+	VoicePitch = 93
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ssg08
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 75
+End
+
+LE "Seth [LE]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 81
+End
+
+LE "Vinny [LE]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = ump45
+	Aggression = 84
+End
+
+LE "Delta [LE]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	Aggression = 82
+End
+
+LE "Style [LE]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 79
+End
+
+LE "Crab [LE]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 77
+End
+
+LE "Jet [LE]"
+	Skin = 4
+	VoicePitch = 86
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 78
+End
+
+
+//----------------------------------------
+
+// He will always be remembered for his chadness and chadery...
+DMG "Chad [DMG]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = p90
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+End
+
+DMG "Chet [DMG]"
+	Skin = 2
+	VoicePitch = 90
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mac10
+	WeaponPreference = mp9
+	Aggression = 79
+End
+
+DMG "Gabe [DMG]"
+	Skin = 4
+	VoicePitch = 102
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = p90
+	WeaponPreference = mp7
+	WeaponPreference = bizon
+	Aggression = 77
+End
+
+DMG "Hank [DMG]"
+	Skin = 1
+	VoicePitch = 98
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 75
+End
+
+DMG "Ivan [DMG]"
+	Skin = 2
+	VoicePitch = 96
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = nova
+	Aggression = 72
+End
+
+DMG "Jim [DMG]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = mp7
+	Aggression = 70
+End
+
+DMG "Echo [DMG]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = ump45
+	Aggression = 78
+End
+
+DMG "August [DMG]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 73
+End
+
+DMG "Fish [DMG]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 74
+End
+
+DMG "Cavity [DMG]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 76
+End
+
+
+//----------------------------------------
+
+MGE "Joe [MGE]"
+	Skin = 1
+	VoicePitch = 105
+	WeaponPreference = g3sg1
+	WeaponPreference = scar20
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = nova
+End
+
+MGE "John [MGE]"
+	Skin = 2
+	VoicePitch = 97
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 73
+End
+
+MGE "Tony [MGE]"
+	Skin = 4
+	VoicePitch = 84
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = ump45
+	Aggression = 72
+End
+
+MGE "Tyler [MGE]"
+	Skin = 1
+	VoicePitch = 90
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 74
+End
+
+MGE "Victor [MGE]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 70
+End
+
+MGE "Vladimir [MGE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	Aggression = 65
+End
+
+MGE "Fox [MGE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ump45
+	Aggression = 71
+End
+
+MGE "Pilot [MGE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 67
+End
+
+MGE "Jockey [MGE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 68
+End
+
+MGE "Hexo [MGE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 69
+End
+
+
+//----------------------------------------
+
+MG2 "Zane [MG2]"
+	Skin = 4
+	VoicePitch = 103
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = p90
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+End
+
+MG2 "Zim [MG2]"
+	Skin = 2
+	VoicePitch = 110
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 69
+End
+
+MG2 "Adrian [MG2]"
+	Skin = 3
+	VoicePitch = 120
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	WeaponPreference = nova
+	Aggression = 60
+End
+
+MG2 "Brad [MG2]"
+	Skin = 1
+	VoicePitch = 100
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mp7
+	WeaponPreference = ump45
+	WeaponPreference = nova
+	Aggression = 67
+End
+
+MG2 "Connor [MG2]"
+	Skin = 2
+	VoicePitch = 104
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 65
+End
+
+MG2 "Cliffe [MG2]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ump45
+	Aggression = 62
+End
+
+MG2 "Golf [MG2]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ump45
+	Aggression = 68
+End
+
+MG2 "Champ [MG2]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 66
+End
+
+MG2 "Crust [MG2]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 63
+End
+
+MG2 "Beast [MG2]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 64
+End
+
+
+//----------------------------------------
+
+MG1 "Dan [MG1]"
+	Skin = 1
+	VoicePitch = 100
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = p90
+	WeaponPreference = xm1014
+	WeaponPreference = ump45
+End
+
+MG1 "Derek [MG1]"
+	Skin = 2
+	VoicePitch = 102
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 63
+End
+
+MG1 "Don [MG1]"
+	Skin = 4
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = sg556
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = nova
+	Aggression = 55
+End
+
+MG1 "Eric [MG1]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 60
+End
+
+MG1 "Erik [MG1]"
+	Skin = 2
+	VoicePitch = 110
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 64
+End
+
+MG1 "Finn [MG1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 61
+End
+
+MG1 "Hotel [MG1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 62
+End
+
+MG1 "Alex [MG1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 59
+End
+
+MG1 "Zoo [MG1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 58
+End
+
+MG1 "Gordon [MG1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 57
+End
+
+
+//----------------------------------------
+
+GNM "Jeff [GNM]"
+	Skin = 1
+	VoicePitch = 90
+	WeaponPreference = p90
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+End
+
+GNM "Kevin [GNM]"
+	Skin = 2
+	VoicePitch = 115
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 59
+End
+
+GNM "Reed [GNM]"
+	Skin = 4
+	VoicePitch = 107
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = p90
+	Aggression = 56
+End
+
+GNM "Rick [GNM]"
+	Skin = 2
+	VoicePitch = 102
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Aggression = 55
+End
+
+GNM "Ted [GNM]"
+	Skin = 1
+	VoicePitch = 98
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	WeaponPreference = ump45
+	Aggression = 50
+End
+
+GNM "Troy [GNM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 53
+End
+
+GNM "India [GNM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = ump45
+	Aggression = 58
+End
+
+GNM "Golden [GNM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 57
+End
+
+GNM "Phyto [GNM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 54
+End
+
+GNM "Chell [GNM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 52
+End
+
+
+//----------------------------------------
+
+GN3 "Wade [GN3]"
+	Skin = 4
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = mp7
+End
+
+GN3 "Wayne [GN3]"
+	Skin = 1
+	VoicePitch = 86
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 54
+End
+
+GN3 "Xander [GN3]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mp7
+	WeaponPreference = bizon
+	Aggression = 45
+End
+
+GN3 "Xavier [GN3]"
+	Skin = 4
+	VoicePitch = 95
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = mp7
+	Aggression = 53
+End
+
+GN3 "Adam [GN3]"
+	Skin = 1
+	VoicePitch = 105
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ump45
+	Aggression = 50
+End
+
+GN3 "Andy [GN3]"
+	Skin = 2
+	VoicePitch = 90
+	WeaponPreference = m249
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = negev
+	WeaponPreference = bizon
+	Aggression = 48
+End
+
+GN3 "Juliett [GN3]"
+	Skin = 2
+	VoicePitch = 90
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = ump45
+	Aggression = 52
+End
+
+GN3 "Star [GN3]"
+	Skin = 2
+	VoicePitch = 90
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 51
+End
+
+GN3 "Scout [GN3]"
+	Skin = 2
+	VoicePitch = 90
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = nova
+	Aggression = 49
+End
+
+GN3 "Plankton [GN3]"
+	Skin = 2
+	VoicePitch = 90
+	Aggression = 47
+End
+
+
+//----------------------------------------
+
+GN2 "Chris [GN2]"
+	Skin = 3
+	VoicePitch = 100
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = p90
+	WeaponPreference = negev
+End
+
+GN2 "Colin [GN2]"
+	Skin = 4
+	VoicePitch = 107
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ump45
+	Aggression = 45
+End
+
+GN2 "Dennis [GN2]"
+	Skin = 1
+	VoicePitch = 104
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = mp7
+	Aggression = 48
+End
+
+GN2 "Doug [GN2]"
+	Skin = 2
+	VoicePitch = 110
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mp7
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	Aggression = 47
+End
+
+GN2 "Gary [GN2]"
+	Skin = 3
+	VoicePitch = 95
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = bizon
+	WeaponPreference = nova
+	Aggression = 46
+End
+
+GN2 "Grant [GN2]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	Aggression = 40
+End
+
+GN2 "Kilo [GN2]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = ump45
+	Aggression = 49
+End
+
+GN2 "Chang [GN2]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 44
+End
+
+GN2 "Darryl [GN2]"
+	Skin = 4
+	VoicePitch = 112
+	Aggression = 42
+End
+
+GN2 "Francis [GN2]"
+	Skin = 4
+	VoicePitch = 112
+	Aggression = 43
+End
+
+
+//----------------------------------------
+
+GN1 "Greg [GN1]"
+	Skin = 1
+	VoicePitch = 111
+	WeaponPreference = p90
+	WeaponPreference = negev
+	WeaponPreference = mp7
+	WeaponPreference = mac10
+	WeaponPreference = mp9
+End
+
+GN1 "Ian [GN1]"
+	Skin = 3
+	VoicePitch = 115
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = ssg08
+	WeaponPreference = nova
+	Aggression = 35
+End
+
+GN1 "Jerry [GN1]"
+	Skin = 4
+	VoicePitch = 112
+	WeaponPreference = m249
+	WeaponPreference = awp
+	WeaponPreference = p90
+	WeaponPreference = negev
+	WeaponPreference = mac10
+	WeaponPreference = mp9
+	Aggression = 44
+End
+
+GN1 "Jon [GN1]"
+	Skin = 1
+	VoicePitch = 96
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	Aggression = 43
+End
+
+GN1 "Keith [GN1]"
+	Skin = 2
+	VoicePitch = 98
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = negev
+	Aggression = 42
+End
+
+GN1 "Mark [GN1]"
+	Skin = 4
+	VoicePitch = 110
+	WeaponPreference = g3sg1
+	WeaponPreference = scar20
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	WeaponPreference = ssg08
+	Aggression = 39
+End
+
+GN1 "Lima [GN1]"
+	Skin = 4
+	VoicePitch = 110
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 41
+End
+
+GN1 "Lisa [GN1]"
+	Skin = 4
+	VoicePitch = 110
+	Aggression = 40
+End
+
+GN1 "Davida [GN1]"
+	Skin = 4
+	VoicePitch = 110
+	Aggression = 37
+End
+
+GN1 "Rochelle [GN1]"
+	Skin = 4
+	VoicePitch = 110
+	Aggression = 38
+End
+
+
+//----------------------------------------
+
+SEM "Matt [SEM]"
+	Skin = 1
+	VoicePitch = 95
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = mp7
+End
+
+SEM "Mike [SEM]"
+	Skin = 2
+	VoicePitch = 100
+	WeaponPreference = m249
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = bizon
+	WeaponPreference = ump45
+	Aggression = 34
+End
+
+SEM "Nate [SEM]"
+	Skin = 4
+	VoicePitch = 99
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	Aggression = 33
+End
+
+SEM "Paul [SEM]"
+	Skin = 3
+	VoicePitch = 98
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = p90
+	WeaponPreference = negev
+	WeaponPreference = mp7
+	Aggression = 38
+End
+
+SEM "Scott [SEM]"
+	Skin = 1
+	VoicePitch = 105
+	WeaponPreference = g3sg1
+	WeaponPreference = scar20
+	WeaponPreference = awp
+	WeaponPreference = ssg08
+	WeaponPreference = nova
+	Aggression = 31
+End
+
+SEM "Steve [SEM]"
+	Skin = 2
+	VoicePitch = 115
+	WeaponPreference = awp
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Aggression = 30
+End
+
+SEM "November [SEM]"
+	Skin = 2
+	VoicePitch = 115
+	Aggression = 39
+End
+
+SEM "Knife [SEM]"
+	Skin = 2
+	VoicePitch = 115
+	Aggression = 37
+End
+
+SEM "Vypa [SEM]"
+	Skin = 2
+	VoicePitch = 115
+	Aggression = 36
+End
+
+SEM "Louis [SEM]"
+	Skin = 2
+	VoicePitch = 115
+	Aggression = 35
+End
+
+
+//----------------------------------------
+
+SE "Tom [SE]"
+	Skin = 3
+	VoicePitch = 110
+	WeaponPreference = p90
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = bizon
+	WeaponPreference = nova
+End
+
+SE "Yahn [SE]"
+	Skin = 4
+	VoicePitch = 92
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+	WeaponPreference = bizon
+	Aggression = 34
+End
+
+// The hero.
+SE "Alfred [SE]"
+	VoicePitch = 110
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	WeaponPreference = ump45
+	Aggression = 31
+End
+
+SE "Bill [SE]"
+	VoicePitch = 100
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mp7
+	WeaponPreference = nova
+	Aggression = 33
+End
+
+SE "Brandon [SE]"
+	VoicePitch = 99
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	Aggression = 25
+End
+
+SE "Calvin [SE]"
+	VoicePitch = 120
+	Aggression = 30
+End
+
+SE "Oscar [SE]"
+	VoicePitch = 120
+	Aggression = 32
+End
+
+SE "Rachel [SE]"
+	VoicePitch = 120
+	Aggression = 29
+End
+
+SE "Ava [SE]"
+	VoicePitch = 120
+	Aggression = 28
+End
+
+SE "Zoey [SE]"
+	VoicePitch = 120
+	Aggression = 27
+End
+
+
+//----------------------------------------
+
+S4 "Dean [S4]"
+	VoicePitch = 111
+	WeaponPreference = awp
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = p90
+	WeaponPreference = negev
+End
+
+S4 "Dustin [S4]"
+	VoicePitch = 98
+	WeaponPreference = m249
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+	Aggression = 27
+End
+
+S4 "Ethan [S4]"
+	VoicePitch = 112
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = mp7
+	Aggression = 25
+End
+
+S4 "Harold [S4]"
+	VoicePitch = 90
+	WeaponPreference = awp
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = xm1014
+	WeaponPreference = ssg08
+	Aggression = 20
+End
+
+S4 "Henry [S4]"
+	VoicePitch = 120
+	Aggression = 23
+End
+
+S4 "Irving [S4]"
+	VoicePitch = 118
+	Aggression = 26
+End
+
+S4 "Papa [S4]"
+	VoicePitch = 118
+	Aggression = 29
+End
+
+S4 "Hans [S4]"
+	VoicePitch = 118
+	Aggression = 28
+End
+
+S4 "Crass [S4]"
+	VoicePitch = 118
+	Aggression = 24
+End
+
+S4 "Rouchard [S4]"
+	VoicePitch = 118
+	Aggression = 22
+End
+
+
+//----------------------------------------
+
+S3 "Jason [S3]"
+	VoicePitch = 116
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galilar
+	WeaponPreference = famas
+End
+
+S3 "Josh [S3]"
+	VoicePitch = 114
+	WeaponPreference = p90
+	WeaponPreference = mp7
+	WeaponPreference = bizon
+	WeaponPreference = ump45
+	WeaponPreference = mac10
+	WeaponPreference = mp9
+	Aggression = 24
+End
+
+S3 "Martin [S3]"
+	VoicePitch = 110
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = negev
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = nova
+	Aggression = 16
+End
+
+S3 "Nick [S3]"
+	VoicePitch = 98
+	Aggression = 21
+End
+
+S3 "Norm [S3]"
+	VoicePitch = 92
+	Aggression = 18
+End
+
+S3 "Orin [S3]"
+	VoicePitch = 113
+	Aggression = 20
+End
+
+S3 "Quebec [S3]"
+	VoicePitch = 113
+	Aggression = 23
+End
+
+S3 "Nina [S3]"
+	VoicePitch = 113
+	Aggression = 22
+End
+
+S3 "James [S3]"
+	VoicePitch = 113
+	Aggression = 19
+End
+
+S3 "Jamison [S3]"
+	VoicePitch = 113
+	Aggression = 17
+End
+
+
+//----------------------------------------
+
+S2 "Pat [S2]"
+	VoicePitch = 114
+	WeaponPreference = awp
+	WeaponPreference = p90
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	WeaponPreference = mp7
+End
+
+S2 "Perry [S2]"
+	VoicePitch = 115
+	WeaponPreference = m249
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	WeaponPreference = p90
+	WeaponPreference = negev
+	WeaponPreference = bizon
+	Aggression = 17
+End
+
+S2 "Ron [S2]"
+	VoicePitch = 100
+	Aggression = 15
+End
+
+S2 "Shawn [S2]"
+	VoicePitch = 102
+	Aggression = 12
+End
+
+S2 "Tim [S2]"
+	VoicePitch = 98
+	Aggression = 18
+End
+
+S2 "Will [S2]"
+	VoicePitch = 96
+	Aggression = 10
+End
+
+S2 "Romeo [S2]"
+	VoicePitch = 96
+	Aggression = 19
+End
+
+S2 "Priya [S2]"
+	VoicePitch = 96
+	Aggression = 16
+End
+
+S2 "Romanov [S2]"
+	VoicePitch = 96
+	Aggression = 18
+End
+
+S2 "Muhlik [S2]"
+	VoicePitch = 96
+	Aggression = 14
+End
+
+
+//----------------------------------------
+
+S1 "Wyatt [S1]"
+	VoicePitch = 94
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	WeaponPreference = ump45
+	WeaponPreference = nova
+End
+
+S1 "Albert [S1]"
+	VoicePitch = 100
+	Aggression = 5
+End
+
+S1 "Allen [S1]"
+	VoicePitch = 110
+	Aggression = 8
+End
+
+S1 "Bert [S1]"
+	VoicePitch = 120
+	Aggression = 10
+End
+
+S1 "Bob [S1]"
+	VoicePitch = 99
+	Aggression = 12
+End
+
+S1 "Cecil [S1]"
+	VoicePitch = 120
+	Aggression = 14
+End
+
+S1 "Sierra [S1]"
+	VoicePitch = 120
+	Aggression = 13
+End
+
+S1 "Jak [S1]"
+	VoicePitch = 120
+	Aggression = 11
+End
+
+S1 "Beck [S1]"
+	VoicePitch = 120
+	Aggression = 9
+End
+
+S1 "Noob [S1]"
+	VoicePitch = 120
+	Aggression = 7
+End
+
+
+//----------------------------------------
+
+Casual "Clarence [-]"
+	VoicePitch = 125
+	WeaponPreference = nova
+End
+
+Casual "Elliot [-]"
+	VoicePitch = 110
+	WeaponPreference = xm1014
+	Aggression = 40
+End
+
+Casual "Elmer [-]"
+	VoicePitch = 100
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	Aggression = 30
+End
+
+Casual "Ernie [-]"
+	VoicePitch = 112
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	Aggression = 35
+End
+
+Casual "Eugene [-]"
+	VoicePitch = 121
+	WeaponPreference = m249
+	Aggression = 15
+End
+
+Casual "Fergus [-]"
+	VoicePitch = 99
+	WeaponPreference = negev
+	Aggression = 20
+End
+
+Casual "Ferris [-]"
+	VoicePitch = 119
+	WeaponPreference = mac10
+	WeaponPreference = mp9
+	Aggression = 90
+End
+
+Casual "Frank [-]"
+	VoicePitch = 118
+	WeaponPreference = mp9
+	WeaponPreference = mac10
+	Aggression = 85
+End
+
+Casual "Frasier [-]"
+	VoicePitch = 117
+	WeaponPreference = mp7
+	Aggression = 95
+End
+
+Casual "Fred [-]"
+	VoicePitch = 116
+	WeaponPreference = ump45
+	Aggression = 75
+End
+
+Casual "George [-]"
+	VoicePitch = 115
+	WeaponPreference = p90
+	Aggression = 100
+End
+
+Casual "Graham [-]"
+	VoicePitch = 114
+	WeaponPreference = bizon
+	Aggression = 80
+End
+
+Casual "Harvey [-]"
+	VoicePitch = 112
+	WeaponPreference = galilar
+	WeaponPreference = famas
+	Aggression = 60
+End
+
+Casual "Irwin [-]"
+	VoicePitch = 111
+	WeaponPreference = famas
+	WeaponPreference = galilar
+	Aggression = 55
+End
+
+Casual "Lester [-]"
+	VoicePitch = 110
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	Aggression = 65
+End
+
+Casual "Marvin [-]"
+	VoicePitch = 109
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	Aggression = 70
+End
+
+Casual "Neil [-]"
+	VoicePitch = 108
+	WeaponPreference = ssg08
+	Aggression = 10
+End
+
+Casual "Niles [-]"
+	VoicePitch = 122
+	WeaponPreference = sg556
+	WeaponPreference = aug
+	Aggression = 45
+End
+
+Casual "Oliver [-]"
+	VoicePitch = 120
+	WeaponPreference = aug
+	WeaponPreference = sg556
+	Aggression = 50
+End
+
+Casual "Opie [-]"
+	VoicePitch = 125
+	WeaponPreference = awp
+	Aggression = 5
+End
+
+Casual "Toby [-]"
+	VoicePitch = 92
+	WeaponPreference = g3sg1
+	WeaponPreference = scar20
+	Aggression = 0
+End
+
+Casual "Ulric [-]"
+	VoicePitch = 100
+	WeaponPreference = scar20
+	WeaponPreference = g3sg1
+	Aggression = 1
+End
+
+Casual "Ulysses [-]"
+	VoicePitch = 102
+	Skill = 50
+End
+
+Casual "Uri [-]"
+	VoicePitch = 104
+	Skill = 40
+End
+
+Casual "Waldo [-]"
+	VoicePitch = 108
+	Skill = 30
+End
+
+Casual "Wally [-]"
+	VoicePitch = 95
+	Skill = 20
+End
+
+Casual "Walt [-]"
+	VoicePitch = 100
+	Skill = 10
+End
+
+Casual "Wesley [-]"
+	VoicePitch = 120
+	Skill = 0
+End
+
+Casual "Coach [-]"
+	VoicePitch = 112
+	Teamwork = 50
+End
+
+Casual "Ellis [-]"
+	VoicePitch = 112
+	Teamwork = 40
+End
+
+Casual "Yanni [-]"
+	VoicePitch = 112
+	Teamwork = 30
+End
+
+Casual "Yogi [-]"
+	VoicePitch = 99
+	Teamwork = 20
+End
+
+Casual "Yuri [-]"
+	VoicePitch = 110
+	Teamwork = 10
+End
+
+Casual "NoAudio [-]"
+	VoicePitch = 0
+	Teamwork = 0
+End
+
+
+//----------------------------------------
+
+Random "ThatRandomGuy [?]"
+	VoicePitch = 125
+End
+
+Random "Dummy [?]"
+	VoicePitch = 1
+End
