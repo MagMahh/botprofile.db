@@ -1,9 +1,6 @@
 # botprofile.db
 Makes CS:GO Bots better and more fun!
 
-# botprofile.db
-Makes CS:GO Bots better and more fun!
-
 **Make Sure To Enable The "Developer Console" If You Want To Improve Your BOT Experience :D**
 *To enable it, press the settings cog located at the bottom left of the screen and proceed to navigate to the “Game Settings” tab. Browse through the options until you find the “Enable Developer Console” setting. Set it to “Yes”.*
 
